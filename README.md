@@ -1,16 +1,32 @@
-# React + Vite
+# Fav Musicians
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+TThis mini app stores lists of favourite musical acts and assigns a special colour to each section. The data is organised into two sections: one for solo musicians and one for bands.
 
-Currently, two official plugins are available:
+The goal is to practise the React workflow between components and use React Context to manage the colours for each section, helping to avoid prop drilling (passing props through many component levels).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## React setup  and structure
 
-## React Compiler
+This programme is written using Vite + React.
+Node is already installed, so I navigated to the desired directory and ran:
+```
+npm create vite@latest
+```
+In the terminal, I was prompted to enter the project name, select the library (React), and choose the language (JavaScript).
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+After installation, I navigated into the new project directory. Everything was then ready to use.
 
-## Expanding the ESLint configuration
+I then created two directories in `src/`, one called `components` for the React components and one called `contexts` for any context files.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Components
+I plan to create three components:
+
+- One for the sections, which displays lists of musicians sorted accordingly.
+- One for the list, which maps over the single items and stores them in an array.
+- One for the single entries (items), which receives the section’s colour and the name as props.
+
+App.jsx will hold the data (names) for the list items and pass them down to the components.
+
+### Context
+This file contains the logic that allows values to be passed down the component tree without having to pass props through every level. This helps avoid unnecessary prop drilling.
+
+
