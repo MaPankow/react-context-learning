@@ -1,5 +1,6 @@
 import './App.css';
 import { MusicSection } from './components/MusicSection';
+import { ThemeContext } from './contexts/ThemeContext';
 
 const singleMusicians = [
   { 
@@ -36,8 +37,13 @@ function App() {
   return (
     <div>
       <h1>Favourite Musicians</h1>
-      <MusicSection musicians={singleMusicians} sectionTitle="Single musicians" />
-      <MusicSection musicians={bands} sectionTitle="Bands" />
+      <ThemeContext.Provider value="light">
+        <MusicSection musicians={singleMusicians} sectionTitle="Single musicians" />
+      </ThemeContext.Provider>
+
+      <ThemeContext.Provider value="dark">
+        <MusicSection musicians={bands} sectionTitle="Bands" />
+      </ThemeContext.Provider>
     </div>
   )
 }
