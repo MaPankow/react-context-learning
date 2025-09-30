@@ -29,4 +29,19 @@ App.jsx will hold the data (names) for the list items and pass them down to the 
 ### Context
 This file contains the logic that allows values to be passed down the component tree without having to pass props through every level. This helps avoid unnecessary prop drilling.
 
+## Set up basic logic to display the musical acts
+
+Before starting with context logic, the React workflow was set up and tested. A few entries for each section were hard-coded as constant variables (arrays of objects) in `App.jsx`.
+
+The first component to receive data as props is `MusicSection.jsx`. In `App.jsx`, the logic displays this component twice, passing down the names of the sections.
+
+In `MusicSection.jsx`, the section titles are displayed as `h2` elements, and the contents of the next component, `MusiciansList.jsx`, are shown by passing down the musicians list as props.
+
+In `MusiciansList.jsx`, the logic maps over the array and displays the list items, which are rendered by the last component in the tree, `ListItem.jsx`. The props for each single object are passed down.
+
+Initially, only the name was included as a key-value pair, so only the name was passed down. To make it more complex, another property, `genres`, was added to each object. Its value is an array, since each musician has more than one genre.
+
+Now, in `MusiciansList.jsx`, the whole object is passed down, and in `ListItem.jsx`, the genres array is mapped over to show the genres in an unordered list.
+
+So far, although the app still looks ugly and needs some CSS, it works and displays the data.
 
