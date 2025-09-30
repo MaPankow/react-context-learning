@@ -1,4 +1,4 @@
-import { ListItem } from "./ListItem";
+import { ListItem } from "./ListItem/ListItem";
 
 export const MusiciansList = ({ musicians }) => {
     return musicians.map((musician) => (

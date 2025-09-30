@@ -45,3 +45,18 @@ Now, in `MusiciansList.jsx`, the whole object is passed down, and in `ListItem.j
 
 So far, although the app still looks ugly and needs some CSS, it works and displays the data.
 
+## Adding context and style
+
+The aim is to give list items a specific theme: `dark` for bands and `light` for single musicians.
+
+The styles for the light and dark themes are set up in `App.css`. The theme is chosen in `App.jsx` and passed down using React Context, not by passing props through every component.
+
+`ThemeContext.js` is set up to create and export the context. It is imported in both `App.jsx` and `ListItem.jsx`. In `App.jsx`, each list is wrapped in a `ThemeContext.Provider` with either "light" or "dark" as the value.
+
+In `ListItem.jsx`, the theme value is read using the context and used in the `className` to apply the correct styles.
+
+Extra styles are added in `ListItem.module.css` for better appearance, but these are separate from the theme logic. The theme would work without these extra styles.
+
+### A renaming
+In former pushes, the `ThemeContext` file might have had the ending `.jsx`. I renamed it to `ThemeContext.js`, as it only contains logic and is no component that returns JSX.
+

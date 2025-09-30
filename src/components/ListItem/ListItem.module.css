@@ -1,0 +1,10 @@
+.card {
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin-bottom: 16px;
+}
+
+.listItems {
+    margin-bottom: 4px;
+}
