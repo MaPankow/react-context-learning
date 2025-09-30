@@ -2,15 +2,33 @@ import './App.css';
 import { MusicSection } from './components/MusicSection';
 
 const singleMusicians = [
-  { name: "Jarvis Cocker"},
-  { name: "Billie Eilish"}
+  { 
+    name: "Jarvis Cocker",
+    genres: ["Pop", "Indie rock"]
+  },
+  { 
+    name: "Billie Eilish",
+    genres: ["Pop", "Trap"]
+  }
 ];
 
 const bands = [
-  { name: "Muse"},
-  { name: "The Strokes"},
-  { name: "Plaiins" },
-  { name: "Pulp" }
+  { 
+    name: "Muse",
+    genres: ["Rock", "Space Rock", "Alternative Rock"]
+  },
+  { 
+    name: "The Strokes",
+    genres: ["Rock", "Alternative Rock"]
+  },
+  { 
+    name: "Plaiins",
+    genres: ["Punkrock", "Indie Rock"]
+  },
+  { 
+    name: "Pulp",
+    genres: ["Pop", "Indie Rock"] 
+  }
 ]
 function App() {
 
