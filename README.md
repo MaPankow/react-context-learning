@@ -60,3 +60,6 @@ Extra styles are added in `ListItem.module.css` for better appearance, but these
 ### A renaming
 In former pushes, the `ThemeContext` file might have had the ending `.jsx`. I renamed it to `ThemeContext.js`, as it only contains logic and is no component that returns JSX.
 
+## Adding a `.Provider` component to the context
+To make the theme context more dynamic and flexible, a `ThemeArea` component is created in the same file as the context. This wrapper component uses the `.Provider` to pass the theme value and can be extended to provide more features later. Since both the context and the component are related to the theme, they are kept together in one file.
+(Note: With the new component, the file now exports JSX, so it was renamed to `ThemeContext.jsx`.)
