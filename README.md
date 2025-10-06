@@ -65,3 +65,4 @@ To make the theme context more dynamic and flexible, a `ThemeArea` component is 
 (Note: With the new component, the file now exports JSX, so it was renamed to `ThemeContext.jsx`.)
 
 ## Adding state to the context
+A button was added to let users switch card themes manually. The new `ThemeSwitcher` component uses the context to access and update the theme state. A CSS module was added to improve button visibility, since the default style showed dark text on a dark background.
