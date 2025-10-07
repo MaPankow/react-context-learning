@@ -73,3 +73,8 @@ In `App.jsx`, `ThemeSwitcher`, `ThemeContext`, and `useContext` were imported. T
 
 The button works through context, which shows how reusable the context and its component are.
 
+## Context Nesting
+
+The same `ThemeContext` is used in a nested way: one global provider wraps `<App />` in `main.jsx`, and two local providers (via `ThemeArea`) are used in `App.jsx` to wrap separate `MusicSection` components. Each section initializes its own theme (`light` or `dark`) independently.
+
+Components like `ListItem` access the nearest provider directly using `useContext`, without requiring prop drilling. This shows how a single context can be reused in multiple scopes to manage isolated UI behavior with shared logic.
