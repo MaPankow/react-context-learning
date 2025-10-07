@@ -1,6 +1,8 @@
 import './App.css';
 import { MusicSection } from './components/MusicSection';
-import { ThemeArea } from './contexts/ThemeContext';
+import { ThemeArea, ThemeContext } from './contexts/ThemeContext';
+import { useContext } from 'react';
+import { ThemeSwitcher } from './components/ThemeSwitcher/ThemeSwitcher';
 
 const singleMusicians = [
   { 
@@ -32,11 +34,12 @@ const bands = [
   }
 ]
 function App() {
-
+  const {theme}=useContext(ThemeContext);
 
   return (
-    <div>
+    <div className={`theme-${theme}`}>
       <h1>Favourite Musicians</h1>
+      <ThemeSwitcher />
       <ThemeArea initialTheme="light">
         <MusicSection musicians={singleMusicians} sectionTitle="Single musicians" />
       </ThemeArea>
